@@ -37,12 +37,10 @@ export class CardComponent implements OnInit {
 
     });
 
-
       this.personService.getUsers()
       .subscribe(
         (data) => { // Success
           this.users = data['results'];
-          console.log(this.users[0]);
         },
         (error) => {
           console.error(error);

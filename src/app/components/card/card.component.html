@@ -8,67 +8,63 @@
     </div>
 </div>
 
-<div class="cardList">
-        <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
-        <div *ngFor='let user of users; let i = index' class="cardListItem">
-
-        <!-- <div *ngIf=''class="col-sm-10 col-sm-offset-1"> -->
-            <div class="card-container">
-                <div class="card">
-                    <div class="front">
-                        <div class="cover">
-                            <img src="../../../assets/images/galaxy.jpg"/>
-                        </div>
-                        <div class="user">
-                            <img class="img-circle" [src]="user.picture.large"/>
-                        </div>
-                        <div class="content">
-                            <div class="main">
-                                <h3 class="name">{{ user.name.first +" "+ user.name.last }}</h3>
-                                <p class="country text-center">{{ user.location.city +", "+ user.location.country }}</p>
-                                <p class="email">{{ user.email }}</p>
-                            </div>
+<div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+    <div *ngFor='let user of users; let i = index' class="cardListItem">
+        <div class="card-container">
+            <div class="card">
+                <div class="front">
+                    <div class="cover">
+                        <img src="../../../assets/images/galaxy.jpg"/>
+                    </div>
+                    <div class="user">
+                        <img class="img-circle" [src]="user.picture.large"/>
+                    </div>
+                    <div class="content">
+                        <div class="main">
+                            <h3 class="name">{{ user.name.first +" "+ user.name.last }}</h3>
+                            <p class="country text-center">{{ user.location.city +", "+ user.location.country }}</p>
+                            <p class="email">{{ user.email }}</p>
                         </div>
                     </div>
-                    <div class="back">
-                        <div class="header">
-                            <h2 class="about">About</h2>
-                        </div>
-                        <div class="content">
-                            <div class="main">
-                                <div class="informations">
-                                    <div id="address">
-                                        <h1 class="about-title">Address </h1>
-                                        <p class="about-text">
-                                            {{ 
-                                                user.location.street.name + ", " + 
-                                                user.location.street.number  + ", " + 
-                                                user.location.city  + ", " + 
-                                                user.location.state  + ", " + 
-                                                user.location.country
-                                            }} 
-                                        </p>
-                                    </div>
-                                    <div id="contact    ">
-                                        <h1 class="about-title">Contact </h1>
-                                        <p>
-                                            <span class="about-text">
-                                                Cell Phone:   {{ user.cell }} 
-                                            </span>
-                                        </p>
-                                        <p>
-                                            <span class="about-text">
-                                                Phone: {{ user.phone }} 
-                                            </span>
-                                        </p>
-                                    </div>
+                </div>
+                <div class="back">
+                    <div class="header">
+                        <h2 class="about">About</h2>
+                    </div>
+                    <div class="content">
+                        <div class="main">
+                            <div class="informations">
+                                <div id="address">
+                                    <h1 class="about-title">Address </h1>
+                                    <p class="about-text">
+                                        {{ 
+                                            user.location.street.name + ", " + 
+                                            user.location.street.number  + ", " + 
+                                            user.location.city  + ", " + 
+                                            user.location.state  + ", " + 
+                                            user.location.country
+                                        }} 
+                                    </p>
+                                </div>
+                                <div id="contact    ">
+                                    <h1 class="about-title">Contact </h1>
+                                    <p>
+                                        <span class="about-text">
+                                            Cell Phone:   {{ user.cell }} 
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span class="about-text">
+                                            Phone: {{ user.phone }} 
+                                        </span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        <!-- </div> -->
-        
+        </div>
     </div>
+
 </div>
